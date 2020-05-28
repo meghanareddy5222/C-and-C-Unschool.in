@@ -1,9 +1,31 @@
 #include<stdio.h>
 main()
 {
-    int a,b,c;
-    printf("Enter a,b,c");
-    scanf("%d%d%d",&a,&b,&c);
-    printf("Sum of %d+%d+%d is %d",a,b,c,a+b+c);
+    int perc;
+    printf("Enter percentage:(in decimal)");
+    scanf("%d",&perc);
+    if (perc>80)
+    {
+        printf("Grade A");
+
+    }
+    else
+    {
+        if (perc<80 && perc>=70)
+            printf("Grade B");
+        else
+        {
+            if (perc<70 && perc>=60)
+                printf("Grade C");
+            else{
+                if (perc<60 && perc>=45)
+                    printf("Grade D");
+                else{
+                        printf("FAIL");
+
+                }
+            }
+        }
+    }
     return 0;
 }
