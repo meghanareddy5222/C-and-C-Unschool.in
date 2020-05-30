@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+#include<math.h>
+float a;
+float area(float r)
+{   a=3.14*r*r;
+    return a;
+
+}
+int area(int s1,int s2,int s3)
+{   int s;
+    s=(s1+s2+s3)/2;
+    a=sqrt(s*(s-s1)*(s-s2)*(s-s3));
+    cout<<"Area of triangle :"<<a<<" sq.units";
+}
+float area(float l,float b)
+{
+    a=l*b;
+    cout<<"Area of rectangle is :"<<a<<" sq.units";
+}
+int main()
+{
+    int c;
+    float ans;
+    cout<<"Enter shape:1.)Circle\n2.)Triange\n3.)Rectangle"<<endl;
+    cin>>c;
+    if (c==1)
+    {   float r;
+        cout<<"Enter radius:";
+        cin>>r;
+        ans=area(r);
+        cout<<"Area of circle is "<<ans<<" sq.units"<<endl;
+    }
+     else if (c==2)
+     {  int s1,s2,s3;
+        cout<<"Enter side1,side2 and side3:"<<endl;
+        cin>>s1>>s2>>s3;
+        area(s1,s2,s3);
+     }
+    else if(c==3)
+    {
+        float l,b;
+        cout<<"Enter length and breadth:"<<endl;
+        cin>>l>>b;
+        area(l,b);
+        
+    }
+    
+    return 0;
+}
