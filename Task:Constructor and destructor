@@ -1,0 +1,60 @@
+
+#include <iostream>
+using namespace std;
+int a,b;
+char c;
+class cal 
+{   int x,y;
+  public:
+cal()
+{   x=0;
+    y=0;
+}
+void get_value(int x,int y)
+{   string ch;
+    cout<<"Enter operator";
+    cin>>c;
+    if (c=='+')
+    cout<<"Sum of " <<x<<" and "<<y<<" is "<<x+y<<endl;
+    else if (c=='-')
+    cout<<"Difference of " <<x<<" and "<<y<<" is "<<x-y<<endl; 
+    else if (c=='*')
+    cout<<"Product of " <<x<<" and "<<y<<" is "<<x*y<<endl;
+    else if (c=='/')
+    cout<<"Quotient of " <<x<<" and "<<y<<" is "<<x/y<<endl;
+    else
+    cout<<"Remainder of "<<x<<" and "<<y<<" is"<<x%y<<endl;
+    
+}
+~cal()
+    {
+        cout<<"Destructor called";
+    }
+};
+int main()
+{
+    cout<<"Enter a and b:";
+    cin>>a>>b;
+    cout<<endl;
+   
+    cout<<endl;
+    cal o;
+    o.get_value(a,b);
+    while (1)
+    {
+         string q;
+        cout<<"Do you want to continue:";
+        cin>>q;
+        if (q=="No")
+        { break;
+        }
+        else
+        {system("clear");
+        cout<<"Enter a and b:";
+        cin>>a>>b;
+        o.get_value(a,b);
+        }   
+    
+    }
+    return 0;
+}
