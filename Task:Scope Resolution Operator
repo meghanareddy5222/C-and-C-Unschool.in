@@ -1,0 +1,41 @@
+
+#include <iostream>
+using namespace std;
+string s;
+int i,c,v;
+class chk
+{
+
+public:
+
+       int fn();
+};
+ int chk::fn()
+{
+    int i=0;
+    
+    while (i<s.length())
+    {
+        if (s[i]=='a'|| s[i]=='e' or s[i]=='i'||s[i]=='o'||s[i]=='u'||s[i]=='A'||s[i]=='E'||s[i]=='I'||s[i]=='O'||s[i]=='U')
+        {
+            v=v+1;
+        }
+        else if (s[i]==' ')
+        {
+            c=c+1;
+        }
+        i=i+1;
+    }
+    cout<<"Vowels: "<<v<<endl;
+    cout<<"Consonants: "<<s.length()-v-c<<endl;
+}
+
+
+int main()
+{
+    cout<<"Enter a string:";
+    getline(cin,s);
+    chk obj;
+    obj.fn();
+    return 0;
+}
