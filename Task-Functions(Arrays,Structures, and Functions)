@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+#include<string.h>
+main()
+{   char s[20]="Chocolate";
+    char s1[20]="Chocolate";
+    char s2[20];
+    printf("Function strcmp()\n");
+    if (strcmp(s,s1)==0)
+        printf("String are equal\n");
+    else
+        printf("Strings are not equal\n");
+    printf("Fucntion strcpy()\n");
+    strcpy(s2,s);
+    printf("String 2 is %s\n",s2);
+    printf("Function strrev()\n");
+    printf("String 1 after reversing is %s\n",strrev(s1));
+    printf("Function strlen()\n");
+    printf("Length of string s is %d\n",strlen(s));
+    printf("Function strupr()\n");
+    char q[30]="Hello Everyone";
+    printf("String q is %s\n",strupr(q));
+    printf("Function strlwr()\n");
+    printf("String q is %s\n",strlwr(q));
+    printf("Function pow()\n");
+    int a=10,b=3;
+    printf("a^b is %f\n",pow(10,3));
+    printf("Function sqrt()\n");
+    printf("square root of 10 is %f\n",sqrt(a));
+    printf("Function ceil() and floor()\n");
+    printf("Ceil for c is %f\n",ceil(2.3));
+    printf("Floor for d is %f\n",floor(4.9));
+    printf("Function rand()\n");
+    printf("%d\n", rand());
+    printf("%d", rand());
+    return 0;
+}
