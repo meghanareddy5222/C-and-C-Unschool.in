@@ -1,0 +1,13 @@
+#include<stdio.h>
+main()
+{
+    int a,b;
+    printf("Enter a and b:");
+    scanf("%d%d",&a,&b);
+    printf("\nSum of %d and %d is %d",a,b,a+b);
+    printf("\nDifference of %d and %d is %d",a,b,a-b);
+    printf("\nProduct of %d and %d is %d",a,b,a*b);
+    printf("\nQuotient of %d and %d is %d",a,b,a/b);
+    printf("\nRemainder when %d divided by %d is %d",a,b,a%b);
+    return 0;
+}
